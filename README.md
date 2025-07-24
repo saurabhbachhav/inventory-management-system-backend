@@ -1,3 +1,4 @@
+````markdown
 # 📦 Inventory Management Tool - Backend (Fi Internship Assignment)
 
 This is a backend REST API built for the Inventory Management Tool as part of the Fi Internship assignment.
@@ -11,7 +12,6 @@ It provides user authentication, and CRUD operations for managing inventory prod
 - **Backend Language**: JavaScript (Node.js)
 - **Framework**: Express.js
 - **Database**: MongoDB (MongoDB Atlas)
-- **ODM**: Mongoose
 - **Authentication**: JWT (JSON Web Tokens)
 - **Password Security**: bcryptjs
 - **Documentation**: Swagger (OpenAPI)
