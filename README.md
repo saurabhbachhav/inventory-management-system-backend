@@ -1,4 +1,3 @@
-````markdown
 # 📦 Inventory Management Tool - Backend (Fi Internship Assignment)
 
 This is a backend REST API built for the Inventory Management Tool as part of the Fi Internship assignment.
