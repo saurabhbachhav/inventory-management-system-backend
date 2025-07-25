@@ -1,24 +1,33 @@
-# 📦 Inventory Management Tool - Backend (Fi Internship Assignment)
+````markdown
+# 📦 Inventory Management Tool – Backend (Fi Internship Assignment)
 
-This is a backend REST API built for the Inventory Management Tool as part of the Fi Internship assignment.
+Welcome to the backend REST API for the **Inventory Management Tool**, created as part of the Fi Internship assignment!  
+It enables:
 
-It provides user authentication, and CRUD operations for managing inventory products, including adding, updating, and listing products.
+✅ User authentication  
+✅ Inventory product management (Add, Update, View)  
+✅ JWT-secured routes  
+✅ Interactive Swagger Docs  
+✅ Postman + Python Testing Support
 
 ---
 
 ## 🛠 Tech Stack Used
 
-- **Backend Language**: JavaScript (Node.js)
-- **Framework**: Express.js
-- **Database**: MongoDB (MongoDB Atlas)
-- **Authentication**: JWT (JSON Web Tokens)
-- **Password Security**: bcryptjs
-- **Documentation**: Swagger (OpenAPI)
-- **API Testing Script**: Python 3 + `requests` module
+| Area             | Tool/Tech               |
+|------------------|-------------------------|
+| Backend Language | Node.js (JavaScript)    |
+| Framework        | Express.js              |
+| Database         | MongoDB Atlas           |
+| ORM              | Mongoose                |
+| Auth             | JWT (jsonwebtoken)      |
+| Password Hashing | bcryptjs                |
+| Docs             | Swagger (OpenAPI)       |
+| API Testing      | Python + `requests`     |
 
 ---
 
-## 🚀 Project Initialization Steps
+## 🚀 Quick Start
 
 ### 🔧 Backend Setup
 
@@ -27,78 +36,63 @@ cd backend
 npm install
 ````
 
-Create a `.env` file:
+📁 A `.env.example` file is included for reference.
+Create your `.env` file:
 
 ```env
 PORT=8080
-MONGO_URI=<your MongoDB Atlas URI>
+MONGO_URI=<your_mongo_atlas_uri>
 JWT_SECRET=your_jwt_secret
 ```
 
-Run the development server:
+🔌 Start the server:
 
 ```bash
 npm run dev
 ```
 
-API will run at:
-
-```
-http://localhost:8080
-```
+> 📡 The API will run at: `http://localhost:8080`
 
 ---
 
-### 🧪 Run API Testing Script
+### 🧪 Run Python API Testing Script
 
-Make sure Python is installed (`python --version`)
-
-Install `requests`:
+Make sure Python is installed:
 
 ```bash
+python --version
 pip install requests
-```
-
-Run the test file:
-
-```bash
 python test_api.py
 ```
 
-✅ This will:
+✅ This script will:
 
 * Register a user
-* Login
+* Log in
 * Add a product
-* Update product quantity
-* Fetch and validate products
+* Update quantity
+* Fetch and verify product list
 
 ---
 
 ## 📘 Swagger API Documentation
 
-Swagger UI is available at:
+🌐 Visit: [`http://localhost:8080/api-docs`](http://localhost:8080/api-docs)
 
-```
-http://localhost:8080/api-docs
-```
+Interactive UI for:
 
-It provides:
-
-* Interactive testing
-* API schemas
-* Request body examples
-* JWT Authorization testing
+* Exploring all routes
+* Sending test requests
+* Testing with JWT tokens
+* Viewing schemas
 
 ---
 
-## 📦 API Endpoints
+## 📦 API Endpoints Summary
 
 ### 🔐 Auth Routes
 
 #### `POST /register`
-
-Registers a new user.
 
 ```json
 {
@@ -109,8 +103,6 @@ Registers a new user.
 
 #### `POST /login`
 
-Logs in and returns JWT.
-
 ```json
 {
   "access_token": "<JWT>"
@@ -119,21 +111,15 @@ Logs in and returns JWT.
 
 ---
 
-### 🧾 Product Routes (Require JWT)
+### 📦 Product Routes (Require Bearer Token)
 
-#### `POST /products` – Adds a new product
+| Method | Endpoint                 | Description             |
+| ------ | ------------------------ | ----------------------- |
+| POST   | `/products`              | Add a new product       |
+| PUT    | `/products/:id/quantity` | Update product quantity |
+| GET    | `/products`              | Get all products        |
 
-#### `PUT /products/:id/quantity` – Updates product quantity
-
-```json
-{
-  "quantity": 15
-}
-```
-
-#### `GET /products` – Returns all products
-
-All requests must include:
+📌 All product requests must include:
 
 ```
 Authorization: Bearer <JWT>
@@ -141,63 +127,88 @@ Authorization: Bearer <JWT>
 
 ---
 
-## 🤖 Where AI Was Used (Honest Explanation)
+## 🤖 Where AI Helped (With Honesty)
 
-This project was made with full learning intent, and **AI tools like ChatGPT** were used for:
+AI tools like **ChatGPT** were used only to:
 
-* Understanding how to implement secure JWT authentication
-* Generating Swagger documentation format and syntax
-* Structuring the Express app (routes/controllers/models)
-* Creating a clean, functional README
-* Writing the Python test script
-* Debugging error messages and speeding up development
+* Understand JWT flow
+* Build Swagger docs & examples
+* Draft this structured README
+* Generate Python test script
+* Solve bugs faster via explanations
 
-⚠️ Final implementation, testing, and validation were done by me.
+⚠️ All final testing, decisions & logic were built and verified manually.
 
 ---
 
-## 📁 Folder Structure
+## 📂 Folder Structure
 
 ```
 backend/
-├── controllers/
-├── models/
-├── routes/
-├── middleware/
 ├── config/
-├── test_api.py          # Python test script
-├── .env                 # Env variables
-├── app.js               # Express app
-└── server.js            # Server startup
+├── controllers/
+├── middleware/
+├── models/
+├── node_modules/
+├── postman/
+│   └── Inventory_Postman_Collection.json
+├── routes/
+├── .env                 # Your environment variables
+├── .env.example         # Reference template
+├── app.js               # Express app config
+├── server.js            # Entry point
+├── test_api.py          # Python testing script
+├── package.json
+└── README.md
 ```
 
 ---
 
 ## ✅ Final Checklist
 
-| Requirement                         | Status |
-| ----------------------------------- | ------ |
-| Login/Register API                  | ✅ Done |
-| Secure Auth with JWT                | ✅ Done |
-| Add, Update, Get Products API       | ✅ Done |
-| Auth Middleware                     | ✅ Done |
-| API Test Script (Python)            | ✅ Done |
-| Swagger Docs (/api-docs)            | ✅ Done |
-| MongoDB Atlas Integration           | ✅ Done |
-| Clean, Simple, Functional Code      | ✅ Done |
-| README with usage and documentation | ✅ Done |
-| Honest mention of AI usage          | ✅ Done |
+| Feature                           | Status |
+| --------------------------------- | ------ |
+| Register/Login API                | ✅ Done |
+| JWT-based Auth Middleware         | ✅ Done |
+| Add / Update / Get Products       | ✅ Done |
+| Python Testing Script             | ✅ Done |
+| Swagger Documentation             | ✅ Done |
+| Postman Collection Included       | ✅ Done |
+| MongoDB Atlas Integration         | ✅ Done |
+| Clean & Secure Code               | ✅ Done |
+| Honest AI Mention in README       | ✅ Done |
+| .env.example & Full Documentation | ✅ Done |
+
+---
+
+## 📥 Postman Collection
+
+📁 Location: `backend/postman/Inventory_Postman_Collection.json`
+🧪 Test your APIs instantly using Postman.
+
+```md
+👉 [Click to Download](./postman/Inventory_Postman_Collection.json)
+```
 
 ---
 
 ## 🙋 About Me
 
-👤 **Name**: Saurabh Bachhav
-📧 **Email**: [bachhavsaurabh7@gmail.com](mailto:bachhavsaurabh7@gmail.com)
-🎓 **College**: IIIT Nagpur
-💻 **Branch**: Computer Science and Engineering
-🎯 **Batch**: 2025
-
-```
+| Info       | Details                                                       |
+| ---------- | ------------------------------------------------------------- |
+| 👤 Name    | Saurabh Bachhav                                               |
+| 📧 Email   | [bt22cse130@iiitn.ac.in](mailto:bt22cse130@iiitn.ac.in) |
+| 🎓 College | IIIT Nagpur                                                   |
+| 🖥️ Branch | Computer Science & Engg                                       |
+| 🎯 Batch   | 2026                                                          |
 
 ---
+
+🔚 **Thank you for reviewing!**
+This project was built with dedication and learning mindset.
+Feel free to give feedback or suggestions! 🙌
+
+````
+
+---
+docs: finalize interactive README, postman info, AI usage & full setup instructions"
