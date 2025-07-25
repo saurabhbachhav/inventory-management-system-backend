@@ -206,5 +206,3 @@ backend/
 🔚 **Thank you for reviewing!**
 This project was built with dedication and learning mindset.
 Feel free to give feedback or suggestions! 🙌
-
-````
