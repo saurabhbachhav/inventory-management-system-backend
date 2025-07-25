@@ -1,4 +1,3 @@
-````markdown
 # 📦 Inventory Management Tool – Backend (Fi Internship Assignment)
 
 Welcome to the backend REST API for the **Inventory Management Tool**, created as part of the Fi Internship assignment!  
@@ -211,4 +210,3 @@ Feel free to give feedback or suggestions! 🙌
 ````
 
 ---
-docs: finalize interactive README, postman info, AI usage & full setup instructions"
