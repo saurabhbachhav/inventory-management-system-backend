@@ -191,6 +191,15 @@ backend/
 
 ---
 
+## 🔗 Frontend Repository
+
+The frontend for this project is built using **React + Vite + Tailwind CSS**, and it's available at:
+
+👉 [Frontend GitHub Repository](https://github.com/saurabhbachhav/inventory-management-system-frontend)
+
+> This connects to the same backend and provides Login, Signup, Dashboard, Add Product, and Update Product screens.
+
+
 ## 🙋 About Me
 
 | Info       | Details                                                       |
