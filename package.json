@@ -1,31 +1,28 @@
 {
-  "name": "m_project",
+  "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "keywords": [
-    "javascript",
-    "backend"
-  ],
-  "author": "saurabh",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "description": "",
-  "devDependencies": {
-    "nodemon": "^3.1.4",
-    "prettier": "^3.3.3"
-  },
   "dependencies": {
-    "bcrypt": "^5.1.1",
-    "cloudinary": "^2.4.0",
-    "cookie-parser": "^1.4.6",
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.5.2",
-    "multer": "^1.4.5-lts.1"
+    "mongodb": "^6.18.0",
+    "mongoose": "^8.16.4",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
