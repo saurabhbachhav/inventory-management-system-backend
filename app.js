@@ -18,6 +18,11 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.get("/", (req, res) => {
+     res.send(
+       "Welcome to IMS Backend! Frontend is deployed on Vercel; check it out."
+     );
+});
 app.use("/", require("./routes/authRoutes"));
 app.use("/", require("./routes/productRoutes"));
 

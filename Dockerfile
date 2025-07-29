@@ -1,25 +1,21 @@
-# Use Node.js LTS
+# Use an official Node runtime as the base image
 FROM node:18
 
-# Set working dir
+# Create app directory
 WORKDIR /usr/src/app
 
-# Copy only package files first
+# Copy package files and install dependencies
 COPY package*.json ./
+RUN npm install
 
-# Install deps
-RUN npm install --production
-
-COPY .env .env
-# Copy all source
+# Copy the rest of your code
 COPY . .
 
-# PORT arg + env
-ARG PORT=8080
-ENV PORT=${PORT}
+# Use the PORT environment variable
+ENV PORT=8080
 
-# Expose that port
+# Expose the port
 EXPOSE ${PORT}
 
-# Launch the app
-CMD ["npm", "run", "dev"]
+# Start the app using the specified port
+CMD ["node", "server.js"]
