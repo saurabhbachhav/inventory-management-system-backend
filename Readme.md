@@ -196,8 +196,17 @@ backend/
 The frontend for this project is built using **React + Vite + Tailwind CSS**, and it's available at:
 
 👉 [Frontend GitHub Repository](https://github.com/saurabhbachhav/inventory-management-system-frontend)
+👉 [Frontend Live Link](https://inventory-management-system-fronten-ten.vercel.app/)
 
 > This connects to the same backend and provides Login, Signup, Dashboard, Add Product, and Update Product screens.
+
+
+## 🐳 Docker Image
+
+You can pull and run the Docker image directly using:
+
+```bash
+docker pull saurabhiiitn/ims-backend@sha256:74b07a1e364e0cf4e52118b3a2cccd1303d5574299f02471071cf75452e2ac39
 
 
 ## 🙋 About Me
